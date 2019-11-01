@@ -5,6 +5,7 @@
 
 
 var colors = ["red", "blue", "green", "yellow"];
+var numClicks = 0;
 
 
 var randomColors = [];
@@ -47,6 +48,7 @@ function randomNumber() {
 		$("." + randomColor).fadeOut(200).fadeIn(200)};
 	$("h1").text("level " + level);
 	colorsChosen = [];
+	numClicks = 0;
 }
 
 
@@ -55,17 +57,26 @@ $(".box").click(function(event){
 	
 	colorsChosen.push(event.target.id);
 	$("#" + event.target.id).fadeOut(200).fadeIn(200);
+	
 	checkRound();
+	
 	
 })
 
 function checkRound(){
-	if (randomColors.length === colorsChosen.length){
-		if (randomColors[level -1] === colorsChosen[level -1]) {
+	if (randomColors[numClicks] === colorsChosen[numClicks]){
+		numClicks++;
+		if (numClicks === level ){
+		
+		
 			randomNumber();
-
+		}
+		
 		
 	} else {
+		console.log(numClicks);
+		console.log(randomColors[numClicks]);
+		console.log(colorsChosen[numClicks]);
 		$("h1").text("Game Over");
 		$("body").addClass("gameOver");
 		setTimeout(function() {
@@ -77,8 +88,9 @@ function checkRound(){
 		start = false;	
 	}
 
-
-}}
+	
+	
+}
 
 
 
