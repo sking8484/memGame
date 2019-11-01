@@ -1,0 +1,56 @@
+body {
+	background-color:#293a80;
+	text-align:center;
+}
+
+.col div {
+	height:150px;
+	border:3px solid black;
+	width: 150px;
+	margin:10px;
+	}
+
+.left-col {
+	position:absolute;
+	right:-13px;
+	margin:10px;
+}
+
+.right-col {
+	position:absolute;
+	right:140px;
+	margin:10px;
+}
+
+.yellow {
+	position:absolute;
+	top:155px;
+	background-color:yellow;
+
+}
+
+.blue {
+	position:absolute;
+	top:155px;
+	background-color:blue;
+}
+
+.red {
+	background-color:red;
+}
+.green {
+	background-color:green;
+}
+
+h1 {
+	padding-top:2%;
+	padding-bottom:8%;
+}
+
+.gameOver{
+	background-color:red;
+
+
+
+
+}
